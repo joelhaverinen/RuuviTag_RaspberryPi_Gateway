@@ -14,4 +14,4 @@ $ python -m pip install git+https://github.com/ttu/ruuvitag-sensor
 
 Try to find all tags:
 
-python3 -m ruuvitag_sensor -f
+$ python3 -m ruuvitag_sensor -f
