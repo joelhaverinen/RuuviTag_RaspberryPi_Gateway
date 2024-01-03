@@ -50,7 +50,7 @@ def mittaus_tallennus():
     print("Temperature:", temperature)
     #print("MAC Address:", mac_address)
 
-    # Luo CSV-tiedosto nimi ajan perusteella
+    # Luo CSV-tiedoston ja sen nimi ajan perusteella
     tiedoston_nimi = f"{aika_pvm}.csv"
     with open(tiedoston_nimi, mode='w', newline='') as tiedosto:
         csv_tiedosto = csv.writer(tiedosto)
