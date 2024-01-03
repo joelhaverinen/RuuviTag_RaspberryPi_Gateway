@@ -33,7 +33,7 @@ if state and 'mac' in state and state['mac'] == expected_mac_address: # täs muo
     mac_address = data['mac']
 else:
     # If the MAC address is not found, set default values
-    data = {'temperature': 'N/A', 'mac': 'Not Available'}
+    data = {'temperature': 'N/A', 'mac': 'N/A'}
     temperature = data['temperature']
     mac_address = data['mac']
 
