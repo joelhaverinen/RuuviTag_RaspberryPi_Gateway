@@ -14,7 +14,7 @@ def mittaus_tallennus():
     sensor = RuuviTag("EC:28:C9:6E:9F:51")
 
     #Timeout
-    timeout_seconds = 1
+    timeout_seconds = 5
 
     # update state from the device and timeout
     @timeout(timeout_seconds)
@@ -28,7 +28,7 @@ def mittaus_tallennus():
     
 
     # get latest state (does not get it from the device)
-    tate = sensor.state
+    state = sensor.state
 
     # Check if the MAC address is the expected one
     expected_mac_address = "ec28c96e9f51"
@@ -41,6 +41,7 @@ def mittaus_tallennus():
         #data = state
         temperature = data['temperature']
         mac_address = data['mac']
+        time.sleep(3)       # Odota 3 sek.
     else:
         # If the MAC address is not found, set default values
         data = {'temperature': 'N/A', 'mac': 'N/A'}
@@ -65,5 +66,4 @@ def mittaus_tallennus():
 if __name__ == "__main__":
     while True:
         mittaus_tallennus()
-        time.sleep(5)       # Odota 5 sek.
-
+        
