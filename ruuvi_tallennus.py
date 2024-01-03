@@ -4,7 +4,7 @@ import time
 from ruuvitag_sensor.ruuvitag import RuuviTag
 from timeout_decorator import timeout
 
-def luo_csv_tiedosto():
+def mittaus_tallennus():
     # Hae nykyinen aika ja päivämäärä
     nyt = datetime.now()
     aika_pvm = nyt.strftime("%Y-%m-%d_%H-%M-%S")  # Ajan muotoilu
@@ -64,6 +64,6 @@ def luo_csv_tiedosto():
 
 if __name__ == "__main__":
     while True:
-        luo_csv_tiedosto()
+        mittaus_tallennus()
         time.sleep(5)       # Odota 5 sek.
 
