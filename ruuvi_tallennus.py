@@ -7,10 +7,10 @@ from timeout_decorator import timeout
 def mittaus_tallennus():
     # Hae nykyinen aika ja päivämäärä
     nyt = datetime.now()
-    aika_pvm = nyt.strftime("%Y-%m-%d_%H-%M-%S")  # Ajan muotoilu
+    aika_pvm = nyt.strftime("%Y-%m-%d_%H-%M-%S")  
 
 
-    # Our Sensor:
+    #Sensor:
     sensor = RuuviTag("EC:28:C9:6E:9F:51")
 
     #Timeout
@@ -36,7 +36,7 @@ def mittaus_tallennus():
     data = state
 
 
-    if state and 'mac' in state and state['mac'] == expected_mac_address: # täs muodos ec28c96e9f51 ei täs EC:28:C9:6E:9F:51
+    if state and 'mac' in state and state['mac'] == expected_mac_address: # (ec28c96e9f51) 
         # If the MAC address is found, continue with the current logic
         #data = state
         temperature = data['temperature']
