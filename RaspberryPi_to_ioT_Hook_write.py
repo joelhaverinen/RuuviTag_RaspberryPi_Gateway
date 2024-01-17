@@ -9,8 +9,8 @@ import threading
 
 # IoThook API details
 iothook_url = 'http://iothook.com/api/update/'
-api_key = 'ba9f2e2542360cdd5a8a5012'  # Replace with your IoThook API key data
-api_key2 = '30900082006d066af22c94bf'  # Replace with your IoThook API key Uplink
+api_key = 'xxxxxxxxxxxxxxxxxxxx'  # Replace with your IoThook API key data
+api_key2 = 'xxxxxxxxxxxxxxxxxxxx'  # Replace with your IoThook API key Uplink
 
 # Function to initialize the RuuviTag sensor
 def initialize_sensor():
